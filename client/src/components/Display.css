@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+.display_container {
+    /* width: 80vw;
+	height: 80vh;
+	position: relative;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+    border:2px solid black;
+    display: flex; */
+		width: 80vw;
+        height: 80vh;
+        position: relative; /*Can also be `fixed`*/
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        max-width: 100vw;
+        max-height: 100vh;
+        overflow: auto;
+		display: flex;
+		flex-wrap: wrap;
+
+}
+
+.display_left {
+    width:35%;
+	background:#ff0055;
+	background-size: cover;
+	text-align: center;
+	padding: 70px 0;
+	color:white;
+	/* font-family: 'Dancing Script', cursive; */
+	font-family: 'Pacifico', cursive;
+}
+
+.display_right {
+    flex-grow: 1;
+	
+}
+
+
+*,:after,:before{box-sizing:border-box}
+.clearfix:after,.clearfix:before{content:'';display:table}
+.clearfix:after{clear:both;display:block}
+a{color:inherit;text-decoration:none}
+
+.login2-wrap{
+	width:100%;
+    max-height: auto;
+	/* margin:auto; */
+	/* min-height:100%; */
+    min-height:100%;
+	position:relative;
+	background:url(https://image.freepik.com/free-vector/illustration-food-icons-isolated-white-background_53876-18361.jpg) no-repeat center;
+	background-size: cover;
+	box-shadow:0 12px 15px 0 rgba(0, 0, 0, 0.945),0 17px 50px 0 rgb(8, 8, 8);
+}
+.login2-html{
+	width: 100%;
+    height: 100%;
+    /* max-height: 80vh; */
+    position: absolute;
+    padding:50px 50px 40px 50px;
+	background:rgba(253, 253, 253, 0.336);
+	overflow-y:scroll;
+    /* background: rgba(40,57,101,.9);
+	
+	width:100%;
+    height:100%;
+	/* max-height:80vh; */
+	/* position:absolute; */
+	/* padding:90px 70px 50px 70px; */
+	/* background:rgba(40,57,101,.9); */
+}
+.login2-html .sign-in-htm,
+.login2-html .sign-up-htm{
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	position:absolute;
+	animation: fadeEffect 1s;
+    /* transform:rotateY(180deg); */
+	backface-visibility:hidden;
+	transition:all .3s linear;
+}
+.login2-html .sign-in,
+.login2-html .sign-up,
+.login2-form .group .check{
+	display:none;
+}
+.login2-html .tab,
+.login2-form .group .label,
+.login2-form .group .button{
+	text-transform:uppercase;
+}
+.login2-html .tab{
+	font-size:22px;
+	margin-right:15px;
+	padding-bottom:5px;
+	margin:0 15px 10px 0;
+	display:inline-block;
+	border-bottom:2px solid transparent;
+}
+.login2-html .sign-in:checked + .tab,
+.login2-html .sign-up:checked + .tab{
+	color:#ff0055;
+	border-color:#ff0055;
+}
+.login2-form{
+	font-family: Varela Round, sans-serif;
+	color:rgba(0, 0, 0, 0.705);
+	height:100%;
+	position:relative;
+	perspective:1000px;
+	transform-style:preserve-3d;
+}
+.login2-form .group{
+	margin-bottom:15px;
+}
+.login2-form .group .label,
+.login2-form .group .input,
+.login2-form .group .button{
+	width:100%;
+	color:#fff;
+	display:block;
+}
+.login2-form .group .input,
+.login2-form .group .button{
+	border:none;
+	padding:15px 20px;
+	border-radius:25px;
+	background:rgba(255,255,255,.1);
+}
+.login2-form .group input[data-type="password"]{
+	-webkit-text-security:circle;
+	-webkit-text-security:circle;
+}
+.login2-form .group .label{
+	color:white;
+	font-size:12px;
+}
+.login2-form .group .button{
+	background:#1161ee;
+}
+.login2-form .group label .icon{
+	width:15px;
+	height:15px;
+	border-radius:2px;
+	position:relative;
+	display:inline-block;
+	background:rgba(255,255,255,.1);
+}
+.login2-form .group label .icon:before,
+.login2-form .group label .icon:after{
+	content:'';
+	width:10px;
+	height:2px;
+	background:#fff;
+	position:absolute;
+	transition:all 0s ease-in-out 0s;
+}
+.login2-form .group label .icon:before{
+	left:3px;
+	width:5px;
+	bottom:6px;
+	transform:scale(0) 
+}
+.login2-form .group label .icon:after{
+	top:6px;
+	right:0;
+	transform:scale(0) 
+}
+.login2-form .group .check:checked + label{
+	color:#fff;
+}
+.login2-form .group .check:checked + label .icon{
+	background:#1161ee;
+}
+.login2-form .group .check:checked + label .icon:before{
+	transform:scale(1) 
+}
+.login2-form .group .check:checked + label .icon:after{
+	transform:scale(1) 
+}
+.login2-html .sign-in:checked + .tab + .sign-up + .tab + .login2-form .sign-in-htm{
+	opacity:0;
+}
+.login2-html .sign-up:checked + .tab + .login2-form .sign-up-htm{
+	opacity:0;
+}
+
+/* .hr{
+	height:2px;
+	margin:60px 0 50px 0;
+	background:rgba(255,255,255,.2);
+} */
+.foot-lnk{
+	text-align:center;
+}
+@keyframes fadeEffect{
+  from {opacity: 0;transfrom:scale(0);}
+  to {opacity: 1;transfrom:scale(1);}
+}
